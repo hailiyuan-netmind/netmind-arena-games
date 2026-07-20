@@ -198,7 +198,7 @@ export default defineGame<State, Params>({
         type: 'scoreboard' as const,
         rows: [
           { label: 'Black', value: s.players[s.black] },
-          { label: 'White', value: s.players[s.black ^ 1] },
+          { label: 'White', value: s.players[s.black === 0 ? 1 : 0] },
         ],
       },
       {
